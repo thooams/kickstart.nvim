@@ -180,6 +180,7 @@ return {
             ["?"] = "show_help",
             ["<"] = "prev_source",
             [">"] = "next_source",
+            ["I"] = "toggle_hidden"
           }
         },
         nesting_rules = {},
