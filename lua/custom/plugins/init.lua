@@ -3,5 +3,6 @@
 --
 -- See the kickstart.nvim README for more information
 vim.o.hlsearch = true
+vim.cmd('autocmd BufWritePre * %s/\\s\\+$//e')
 
 return {}
