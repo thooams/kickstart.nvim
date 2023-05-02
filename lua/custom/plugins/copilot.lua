@@ -42,7 +42,14 @@ return {
         ["."] = false,
       },
       copilot_node_command = 'node', -- Node.js version must be > 16.x
-      server_opts_overrides = {},
-    })
+      server_opts_overrides = {
+        trace = "verbose",
+    settings = {
+      advanced = {
+        listCount = 10, -- #completions for panel
+        inlineSuggestCount = 10, -- #completions for getCompletions
+      }
+        }
+    }})
   end
 }
