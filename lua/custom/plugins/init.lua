@@ -17,4 +17,17 @@ vim.opt.listchars:append({ eol = "$", tab = ">-", trail = "~" , extends = ">" , 
 vim.opt.textwidth = 80
 vim.opt.colorcolumn = "+1"
 
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
+
+-- Navigate between panes
+-- Map ctrl + ~ to switch to the right panel
+vim.api.nvim_set_keymap('n', '⚓', '<C-W>l', { noremap = true })
+vim.api.nvim_set_keymap('n', '™', '<C-W>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '®', '<C-W>k', { noremap = true })
+vim.api.nvim_set_keymap('n', 'ſ', '<C-W>j', { noremap = true })
+
+-- Map ctrl + ~ to switch resize verticaly pane +5
+vim.api.nvim_set_keymap('n', '˙', '<C-W>5>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'ᵉ', '<C-W>5<', { noremap = true })
+
 return {}
