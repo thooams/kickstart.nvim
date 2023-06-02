@@ -1,5 +1,6 @@
 FROM alpine:3.18
-RUN apk add --no-cache build-base neovim git unzip
+RUN apk add --no-cache --update build-base neovim git unzip curl nodejs git \
+  ruby ruby-dev npm && rm -rf /var/cache/apk/*
 
 # create config/nvim
 RUN mkdir -p /root/.config/nvim
@@ -9,5 +10,5 @@ WORKDIR /root/.config/nvim
 COPY . /root/.config/nvim
 
 # Run nvim
-# CMD DISABLE_COPILOT=1 nvim
-ENTRYPOINT ["nvim"]
+# ENTRYPOINT ["DISABLE_COPILOT=1 nvim"]
+CMD DISABLE_COPILOT=1 nvim /mnt/workspace
