@@ -91,4 +91,6 @@ vim.api.nvim_set_keymap('n', '<C-A-S-Left>', '<C-W>H', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-A-S-Up>', '<C-W>K', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-A-S-Down>', '<C-W>J', { noremap = true })
 
+vim.cmd("au BufNewFile,BufRead *.json.jbuilder set ft=ruby")
+
 return {}
